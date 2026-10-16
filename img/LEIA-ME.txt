@@ -1,0 +1,2 @@
+A foto de fundo do topo (sirene de viatura) e carregada direto do Unsplash (licenca gratuita), ja otimizada para celular e desktop.
+Para usar um arquivo proprio: salve aqui como hero.jpg e troque no index.html os enderecos https://images.unsplash.com/photo-1608095476825-... por img/hero.jpg.
