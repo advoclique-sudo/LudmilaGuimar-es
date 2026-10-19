@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Advogada Criminalista em Luziânia GO | Ludmila Guimarães Advocacia</title>
-<meta name="description" content="Advogada criminalista em Luziânia – GO, com 13 anos de experiência. Prisão em flagrante, investigação policial, intimação para delegacia, processos criminais, audiência de custódia e execução penal. Fale pelo WhatsApp.">
+<meta name="description" content="Advogada criminalista em Luziânia – GO, com 13 anos de experiência e atuação em todo o território nacional. Prisão em flagrante, investigação policial, intimação para delegacia, processos criminais, audiência de custódia e execução penal. Fale pelo WhatsApp.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#101114">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
   "name": "Ludmila Guimarães Advocacia",
   "description": "Advocacia criminal em Luziânia – GO: prisão em flagrante, investigação policial, processos criminais, audiência de custódia e execução penal.",
   "telephone": "+55-61-99683-4312",
-  "areaServed": { "@type": "City", "name": "Luziânia" },
+  "areaServed": [{ "@type": "City", "name": "Luziânia" }, { "@type": "Country", "name": "Brasil" }],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rua Benjamim Roriz, Quadra 51, Lote 15, Ed. Apolo Henrique, Sala 2, Bairro Diogo Machado de Araújo",
@@ -65,7 +65,7 @@
     "@type": "Person",
     "name": "Ludmila Guimarães",
     "jobTitle": "Advogada Criminalista",
-    "identifier": "OAB/GO 37738-A"
+    "identifier": ["OAB/GO 37738-A", "OAB/DF 40.205"]
   }
 }
 </script>
@@ -149,6 +149,13 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;line-heig
 .hero-actions{display:flex;flex-direction:column;align-items:center;gap:16px}
 .hero-actions small{font-size:.8rem;color:var(--texto-suave);letter-spacing:.03em}
 .hero-actions small b{color:var(--branco);font-weight:500}
+@media(max-width:600px){
+  .hero-actions small .ln{display:block}
+  .hero-actions small .sep{display:none}
+  .credibility{flex-direction:column;gap:4px;font-size:.68rem;letter-spacing:.2em}
+  .credibility::before,.credibility::after,.credibility .pipe{display:none}
+  .credibility span:last-child{color:var(--texto-suave)}
+}
 
 /* atalhos por situação */
 .atalhos{margin-top:38px}
@@ -212,20 +219,21 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:.01em;line-heig
 .sobre{background:var(--carvao)}
 .sobre-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
 .foto-adv img{object-position:center 22%}
-.sobre-box{text-align:center;position:relative}
+.sobre-box{text-align:left;position:relative}
 .sobre h2{font-size:clamp(2.2rem,7vw,3.4rem);margin:16px 0 10px;letter-spacing:.04em}
-.sobre .cargo{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dourado);margin-bottom:6px;font-weight:500}
+.sobre .cargo{font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dourado);margin-bottom:28px;font-weight:500}
 .sobre .oab{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--texto-suave);margin-bottom:26px}
-.sobre p.bio{color:var(--texto-suave);max-width:560px;margin:0 auto 34px}
-.assinatura{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:28px;border-top:1px solid var(--linha);max-width:560px;margin:0 auto}
-.assinatura div{display:flex;flex-direction:column;align-items:center}
+.sobre .bio{color:var(--texto-suave);max-width:560px;margin:0 0 34px;font-size:1rem;line-height:1.75}
+.sobre .bio p+p{margin-top:16px}
+.assinatura{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:28px;border-top:1px solid var(--linha);max-width:560px;margin:0}
+.assinatura div{display:flex;flex-direction:column;align-items:flex-start}
 .assinatura strong{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--branco);line-height:1}
 .assinatura span{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave);margin-top:8px;line-height:1.5}
 .sobre-cta{margin-top:36px}
 @media(min-width:960px){
   .sobre-grid{grid-template-columns:.9fr 1.1fr;gap:96px}
   .sobre-box{text-align:left}
-  .sobre p.bio,.assinatura{margin-left:0}
+  .sobre .bio,.assinatura{margin-left:0}
   .assinatura div{align-items:flex-start}
 }
 
@@ -338,7 +346,7 @@ footer{background:#0B0C0E;border-top:1px solid var(--linha);padding:68px 0 130px
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="credibility reveal">Advogada Criminalista | 13 anos de experiência</div>
+      <div class="credibility reveal"><span>Advogada Criminalista</span><span class="pipe">|</span><span>13 anos de experiência</span></div>
       <h1 class="reveal d1">Intimado, investigado ou com <em>um familiar preso?</em></h1>
       <p class="lead reveal d2">Investigações, acusações e processos criminais exigem uma atuação jurídica cuidadosa. Conheça seus direitos e conte com uma defesa estratégica e individualizada.</p>
       <div class="hero-actions reveal d3">
@@ -346,7 +354,7 @@ footer{background:#0B0C0E;border-top:1px solid var(--linha);padding:68px 0 130px
           <svg aria-hidden="true"><use href="#wa"/></svg>
           Falar com uma advogada criminalista
         </a>
-        <small>Atendimento <b>discreto</b> em <b>Luziânia – GO</b> e região</small>
+        <small><span class="ln">Sede em <b>Luziânia – GO</b></span><span class="sep"> · </span><span class="ln">Atuação em <b>todo o território nacional</b></span></small>
       </div>
 
       <div class="atalhos reveal d4">
@@ -362,7 +370,9 @@ footer{background:#0B0C0E;border-top:1px solid var(--linha);padding:68px 0 130px
       <div class="selos reveal d4">
         <span>13 anos de experiência</span>
         <span>OAB/GO 37738-A</span>
+        <span>OAB/DF 40.205</span>
         <span>Pós em Penal e Processo Penal</span>
+        <span>Atuação em todo o Brasil</span>
       </div>
     </div>
   </div>
@@ -460,13 +470,16 @@ footer{background:#0B0C0E;border-top:1px solid var(--linha);padding:68px 0 130px
     <div class="sobre-box reveal d1">
       <span class="eyebrow">A advogada</span>
       <h2>Ludmila Guimarães</h2>
-      <p class="cargo">Advogada Criminalista | 13 anos de experiência</p>
-      <p class="oab">OAB/GO 37738-A</p>
-      <p class="bio">Pós-graduada em Direito Penal e Processo Penal, Ludmila Guimarães desenvolve sua atuação com ética, dedicação e compromisso com a Justiça. Seu trabalho é pautado em uma defesa humanizada, estratégica e individualizada, respeitando a história e os direitos de cada cliente.</p>
+      <p class="cargo">Advogada Criminalista</p>
+      <div class="bio">
+        <p>Pós-graduada em Direito Penal e Processo Penal, a Dra. Ludmila Guimarães possui uma trajetória de 13 anos na advocacia criminal, com atuação em todo o território nacional.</p>
+        <p>Com vasta experiência em todas as fases da persecução penal, desde o inquérito policial até a execução da pena, desenvolve um trabalho pautado na ética, na dedicação e no compromisso com a Justiça.</p>
+        <p>Sua atuação é marcada por uma defesa humanizada, estratégica e individualizada, com atenção às particularidades de cada caso e respeito à história, à dignidade e aos direitos de cada cliente.</p>
+      </div>
       <div class="assinatura">
         <div><strong>13</strong><span>Anos de<br>experiência</span></div>
         <div><strong>Pós</strong><span>Penal e<br>Processo Penal</span></div>
-        <div><strong>GO</strong><span>Luziânia<br>e região</span></div>
+        <div><strong>BR</strong><span>Atuação em todo<br>o território nacional</span></div>
       </div>
       <div class="sobre-cta">
         <a class="btn wa-link" data-local="cta-sobre" href="#" target="_blank" rel="noopener">
@@ -530,8 +543,8 @@ footer{background:#0B0C0E;border-top:1px solid var(--linha);padding:68px 0 130px
     <div class="foot-grid">
       <div class="foot-brand">
         <img class="logo-full" src="img/logo-clara.svg" alt="Ludmila Guimarães Advocacia Criminal" width="260" height="110" loading="lazy">
-        <p>Advocacia Criminal | Luziânia – GO</p>
-        <p>Ludmila Guimarães – OAB/GO 37738-A</p>
+        <p>Advocacia Criminal | Luziânia – GO<br>Atuação em todo o território nacional</p>
+        <p>Ludmila Guimarães<br>OAB/GO 37738-A | OAB/DF 40.205</p>
       </div>
       <div>
         <h4>Contato</h4>
